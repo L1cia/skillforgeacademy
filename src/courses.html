@@ -1,0 +1,65 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkillForge Academy | Courses</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <style>
+    
+    .line-clamp-3 {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body class="flex flex-col md:flex-row bg-gray-100 min-h-screen">
+
+  <!-- Sidebar -->
+  <aside class="w-full md:w-64 bg-purple-700 text-white p-6">
+    <h2 class="text-2xl font-bold mb-8 text-center md:text-left">SkillForge</h2>
+    <nav class="space-y-4 flex flex-col items-center md:items-start">
+      <a href="dashboard.html" class="flex items-center gap-2 p-3 rounded-lg hover:bg-purple-600 w-full">
+        <i class='bx bxs-dashboard'></i> Dashboard
+      </a>
+      <a href="courses.html" class="flex items-center gap-2 p-3 rounded-lg bg-purple-600 w-full">
+        <i class='bx bxs-book'></i> Courses
+      </a>
+      <a href="assignment.html" class="flex items-center gap-2 p-3 rounded-lg hover:bg-purple-600 w-full">
+        <i class='bx bxs-edit'></i> Assignments
+      </a>
+      <a href="profile.html" class="flex items-center gap-2 p-3 rounded-lg hover:bg-purple-600 w-full">
+        <i class='bx bxs-user'></i> Profile
+      </a>
+      <a href="login.html" class="flex items-center gap-2 p-3 rounded-lg bg-red-600 hover:bg-red-700 mt-8 w-full">
+        <i class='bx bx-log-out'></i> Logout
+      </a>
+    </nav>
+  </aside>
+
+  <!-- Content -->
+  <main class="flex-1 p-6 sm:p-10">
+    <h1 class="text-2xl sm:text-3xl font-bold text-purple-900 mb-6 text-center md:text-left">Available Courses</h1>
+
+    <!-- Courses Grid -->
+    <div id="coursesGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      
+      <!-- Example Course Card -->
+      <div class="bg-white p-6 rounded-xl shadow-md overflow-hidden">
+        <h2 class="text-lg sm:text-xl font-semibold text-purple-700 truncate">Introduction to Programming</h2>
+        <p class="mt-2 text-gray-600 text-sm sm:text-base line-clamp-3">
+          Learn the fundamentals of programming including variables, loops, functions, and more. This course is designed for beginners and provides a solid foundation.
+        </p>
+        <button class="mt-4 bg-purple-700 hover:bg-purple-800 text-white px-4 py-2 rounded-md w-full sm:w-auto">Enroll</button>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="courses.js"></script>
+</body>
+</html>
