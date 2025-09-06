@@ -36,15 +36,21 @@
       </button>
 
       <!-- Nav Links -->
-      <nav id="menu" class="hidden md:flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 text-purple-700 font-medium absolute md:static bg-white md:bg-transparent left-0 right-0 top-16 md:top-0 shadow-md md:shadow-none p-6 md:p-0">
+      <nav id="menu" class="hidden md:flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-6 text-purple-700 font-medium absolute md:static bg-white md:bg-transparent left-0 right-0 top-16 md:top-0 shadow-md md:shadow-none p-6 md:p-0">
         <a href="#home" class="hover:text-purple-900">Home</a>
         <a href="#features" class="hover:text-purple-900">Features</a>
         <a href="#dashboard" class="hover:text-purple-900">Preview</a>
         <a href="#about" class="hover:text-purple-900">About</a>
         <a href="#contact" class="hover:text-purple-900">Contact</a>
+
+        <!-- Mobile Login/Signup Buttons -->
+        <div class="flex flex-col md:hidden space-y-3 mt-4">
+          <a href="login.html" class="px-4 py-2 text-purple-700 border border-purple-700 rounded-lg hover:bg-purple-700 hover:text-white transition text-center">Login</a>
+          <a href="signup.html" class="px-4 py-2 bg-purple-700 text-white rounded-lg hover:bg-purple-800 transition text-center">Sign Up</a>
+        </div>
       </nav>
 
-      <!-- Buttons -->
+      <!-- Desktop Buttons -->
       <div class="hidden md:flex space-x-3">
         <a href="login.html" class="px-4 py-2 text-purple-700 border border-purple-700 rounded-lg hover:bg-purple-700 hover:text-white transition">Login</a>
         <a href="signup.html" class="px-4 py-2 bg-purple-700 text-white rounded-lg hover:bg-purple-800 transition">Sign Up</a>
@@ -67,48 +73,6 @@
     </a>
   </section>
 
-  <!-- Features Section -->
-  <section id="features" class="max-w-6xl mx-auto py-16 md:py-20 px-6">
-    <h2 class="fade-up text-2xl sm:text-3xl md:text-4xl font-bold text-center text-purple-800">Powerful Features to Fuel Your Growth</h2>
-    <p class="fade-up text-center mt-4 text-gray-700 max-w-2xl mx-auto text-sm sm:text-base" style="animation-delay:.2s">
-      SkillForge Academy isn’t just another platform — it’s your personal forge. 
-      Here, skills are heated, hammered, and sharpened into tools for success.
-    </p>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mt-14">
-      <!-- Features -->
-      <div class="fade-up bg-white shadow-lg rounded-xl p-6 sm:p-8 text-center hover:shadow-2xl transition" style="animation-delay:.4s">
-        <svg class="w-12 h-12 sm:w-14 sm:h-14 mx-auto text-purple-700 mb-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path d="M12 20l9-16H3l9 16z"/>
-        </svg>
-        <h3 class="font-bold text-lg sm:text-xl text-purple-800">Effortless Access</h3>
-        <p class="mt-4 text-gray-600 text-sm sm:text-base">
-          Log in or sign up in seconds and dive right into your courses. Our secure, 
-          cross-device system ensures learning is always seamless.
-        </p>
-      </div>
-      <div class="fade-up bg-white shadow-lg rounded-xl p-6 sm:p-8 text-center hover:shadow-2xl transition" style="animation-delay:.6s">
-        <svg class="w-12 h-12 sm:w-14 sm:h-14 mx-auto text-purple-700 mb-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
-        </svg>
-        <h3 class="font-bold text-lg sm:text-xl text-purple-800">Progress Tracking</h3>
-        <p class="mt-4 text-gray-600 text-sm sm:text-base">
-          Visualize your journey with clear goals, deadlines, and progress charts. 
-          Every milestone motivates you to keep moving forward.
-        </p>
-      </div>
-      <div class="fade-up bg-white shadow-lg rounded-xl p-6 sm:p-8 text-center hover:shadow-2xl transition" style="animation-delay:.8s">
-        <svg class="w-12 h-12 sm:w-14 sm:h-14 mx-auto text-purple-700 mb-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path d="M5 13l4 4L19 7"/>
-        </svg>
-        <h3 class="font-bold text-lg sm:text-xl text-purple-800">High-Quality Courses</h3>
-        <p class="mt-4 text-gray-600 text-sm sm:text-base">
-          From web development to data science, our courses are designed with 
-          real-world projects and hands-on learning.
-        </p>
-      </div>
-    </div>
-  </section>
-
   <!-- Footer -->
   <footer id="contact" class="bg-purple-800 text-white py-10 px-6 mt-12">
     <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
@@ -122,6 +86,5 @@
   </footer>
 
   <script src="landing.js"></script>
-  
 </body>
 </html>
