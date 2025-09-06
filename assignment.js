@@ -1,25 +1,22 @@
+document.addEventListener("DOMContentLoaded", async () => {
+  try {
+    const res = await fetch(`${API_BASE}/assignments`);
+    const assignments = await res.json();
 
-const assignmentsList = document.getElementById("assignmentsList");
-git
-fetch("https://skillforge-api-4tme.onrender.com/assignments")
-  .then(res => res.json())
-  .then(data => {
-    assignmentsList.innerHTML = data
-      .map(task => `
-        <li class="bg-white p-4 rounded-lg shadow flex justify-between items-center">
-          <span class="${task.completed ? "line-through text-gray-500" : ""}">
-            ${task.title}
-          </span>
-          <span class="px-3 py-1 rounded-full text-xs ${
-            task.completed ? "bg-green-100 text-green-700" : "bg-yellow-100 text-yellow-700"
-          }">
-            ${task.completed ? "Completed" : "Pending"}
-          </span>
-        </li>
-      `)
-      .join("");
-  })
-  .catch(err => {
-    assignmentsList.innerHTML = `<p class="text-red-500">Failed to load assignments.</p>`;
-    console.error("Assignments API Error:", err);
-  });
+    const list = document.getElementById("assignments");
+    list.innerHTML = "";
+
+    assignments.forEach(item => {
+      const li = document.createElement("li");
+      li.className =
+        "p-4 mb-3 bg-white shadow rounded-lg hover:shadow-xl transition";
+      li.innerHTML = `
+        <h3 class="text-lg font-bold text-purple-700">${item.title}</h3>
+        <p class="text-gray-600 mt-1">${item.description}</p>
+      `;
+      list.appendChild(li);
+    });
+  } catch (err) {
+    console.error("Error fetching assignments:", err);
+  }
+});
